@@ -2,7 +2,7 @@
 Password Generator: JavaScript
 
 ## Desctiption
-Create an application that enables employees to generate random passwords based on criteria that they’ve selected. This app will run in the browser and will feature dynamically updated HTML and CSS powered by JavaScript code that you write. It will have a clean and polished, responsive user interface that adapts to multiple screen sizes. The password can include special characters.
+Create an application that enables employees to generate random passwords based on criteria that they’ve selected. This program will run in the browser and will feature dynamically updated HTML and CSS powered by JavaScript code. The HTML has responsive interface that adapts to multiple screen sizes. The password include special characters, numbers, upper case and lower case.
 
 ## User Story
 
@@ -12,7 +12,7 @@ SO THAT I can create a strong password that provides greater security
 
 ## Acceptance Criteria
 
-GIVEN I need a new, secure password
+GIVEN a new, secure password
 WHEN I click the button to generate a password
 THEN I am presented with a series of prompts for password criteria
 WHEN prompted for password criteria
@@ -26,9 +26,9 @@ THEN my input should be validated and at least one character type should be sele
 WHEN all prompts are answered
 THEN a password is generated that matches the selected criteria
 WHEN the password is generated
-THEN the password is either displayed in an alert or written to the page
+THEN the password is either displayed in an alert to the page.
 
 ## Mock-Up
-The following image shows the web application's appearance and functionality:
+The following image shows the web application's appearance:
 
-![The Password Generator application displays a red button to "Generate Password".](./Assets/03-javascript-homework-demo.png)
+![The Password Generator application displays a red button to "Generate Password".](./Assets/Screenshot_Password_Generator.png)
