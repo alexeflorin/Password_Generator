@@ -6,6 +6,7 @@ var includedLowerCaseLetter=["q","w","e","r","t","y","u","i","o","p","a","s","d"
 var includedUpperCaseLetter=["Q","W","E","R","T","Y","U","I","O","P","A","S","D","F","G","H","J","K","L","Z","X","C","V","B","N","M"];
 var includedNumbers=["0","1","2","3","4","5","6","7","8","9"];
 var includeSpecialCharacters=["!","#","$","%","&","'","(",")","*","+",",","-",".","/",":",";","<","=",">","?","@","[","]","/","^","_","`","{","|","}","~"];
+
 function getRandomNumber(min, max) {
   var randomNumber=Math.random() // Random number between 0 and 0.99
   var randomNumberUpToMax=randomNumber * max // Random number between 0 and max - 0.1
@@ -21,16 +22,12 @@ function getRandomValueFromArray(array) {
 function generatePassword() {
  var password="";
 
-
-// 1- ask the user how many characters
+// 1- ask the user how many characters. Promt to confirm how many characters. Loop if answer is outside of the parameters. 
   var numberOfCharacters = (prompt("Choose the length of your password. This needs to be between 8 - 128"));
-  if (numberOfCharacters <=8 || numberOfCharacters >=128)
+ while (numberOfCharacters <=7 || numberOfCharacters >=128) {
   alert ("Please select a number between 8 - 128");
-
-  
- var numberOfCharacters = (prompt("Choose the length of your password. This needs to be between 8 - 128"));
-
-
+  var numberOfCharacters = (prompt("Choose the length of your password. This needs to be between 8 - 128"));
+  }
 
 // 2- ask if the user want to use lower case letters
  var withLowerCaseLetter=confirm("Would you like to include lower case characters?");
@@ -56,10 +53,13 @@ if (withSpecialCharacters) {
 
 
 // 6- generate a password with the number of characters and the types of characters selected by the user and put it in the "password generated"
-
+// 
+for (var i=0; i<numberOfCharacters;i++) {
+  password=password+password[Math.floor(Math.random()*password.length)];
+}
 
 return password;
-  
+
 
 // return "password generated" is actually the password, not the word password generated...
 
@@ -81,6 +81,3 @@ function writePassword() {
 
 generateBtn.addEventListener("click", writePassword);
 // Whenever the button is "click" the "writePassword" function will be executed.
-
-
-
